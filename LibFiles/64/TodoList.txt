@@ -1,0 +1,1 @@
+copy the lib*.so files of 64 bit version here.
