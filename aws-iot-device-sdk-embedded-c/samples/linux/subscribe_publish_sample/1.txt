@@ -1,0 +1,201 @@
+Script started on 2020-03-25 00:55:12+0000
+]0;ubuntu@ubuntu: ~/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sampleubuntu@ubuntu:~/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sample$ ./[K[Kls
+1.txt  Makefile  aws_iot_config.h  aws_iot_config.h.original  [0m[01;32msubscribe_publish_sample[0m  subscribe_publish_sample.c
+]0;ubuntu@ubuntu: ~/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sampleubuntu@ubuntu:~/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sample$ ./subscribe_publish_sample 
+
+AWS IoT SDK Version 3.0.1-
+
+DEBUG:   main L#159 rootCA /home/ubuntu/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sample/../../../certs/AmazonRootCA1.crt
+DEBUG:   main L#160 clientCRT /home/ubuntu/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sample/../../../certs/134b240ff6-certificate.pem.crt
+DEBUG:   main L#161 clientKey /home/ubuntu/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sample/../../../certs/134b240ff6-private.pem.key
+Connecting...
+DEBUG:   iot_tls_connect L#130 
+  . Seeding the random number generator...
+DEBUG:   iot_tls_connect L#138   . Loading the CA root certificate ...
+DEBUG:   iot_tls_connect L#144  ok (0 skipped)
+
+DEBUG:   iot_tls_connect L#146   . Loading the client cert. and key...
+DEBUG:   iot_tls_connect L#159  ok
+
+DEBUG:   iot_tls_connect L#161   . Connecting to a1c6lndnaz78tk-ats.iot.ap-northeast-1.amazonaws.com/443...
+DEBUG:   iot_tls_connect L#180  ok
+
+DEBUG:   iot_tls_connect L#182   . Setting up the SSL/TLS structure...
+DEBUG:   iot_tls_connect L#223 
+
+SSL state connect : 0 
+DEBUG:   iot_tls_connect L#226  ok
+
+DEBUG:   iot_tls_connect L#228 
+
+SSL state connect : 0 
+DEBUG:   iot_tls_connect L#229   . Performing the SSL/TLS handshake...
+DEBUG:   _iot_tls_verify_cert L#49 
+Verify requested for (Depth 2):
+
+DEBUG:   _iot_tls_verify_cert L#51 cert. version     : 3
+serial number     : 06:6C:9F:CF:99:BF:8C:0A:39:E2:F0:78:8A:43:E6:96:36:5B:CA
+issuer name       : C=US, O=Amazon, CN=Amazon Root CA 1
+subject name      : C=US, O=Amazon, CN=Amazon Root CA 1
+issued  on        : 2015-05-26 00:00:00
+expires on        : 2038-01-17 00:00:00
+signed using      : RSA with SHA-256
+RSA key size      : 2048 bits
+basic constraints : CA=true
+key usage         : Digital Signature, Key Cert Sign, CRL Sign
+
+DEBUG:   _iot_tls_verify_cert L#54   This certificate has no flags
+
+DEBUG:   _iot_tls_verify_cert L#49 
+Verify requested for (Depth 1):
+
+DEBUG:   _iot_tls_verify_cert L#51 cert. version     : 3
+serial number     : 06:7F:94:57:85:87:E8:AC:77:DE:B2:53:32:5B:BC:99:8B:56:0D
+issuer name       : C=US, O=Amazon, CN=Amazon Root CA 1
+subject name      : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
+issued  on        : 2015-10-22 00:00:00
+expires on        : 2025-10-19 00:00:00
+signed using      : RSA with SHA-256
+RSA key size      : 2048 bits
+basic constraints : CA=true, max_pathlen=0
+key usage         : Digital Signature, Key Cert Sign, CRL Sign
+
+DEBUG:   _iot_tls_verify_cert L#54   This certificate has no flags
+
+DEBUG:   _iot_tls_verify_cert L#49 
+Verify requested for (Depth 0):
+
+DEBUG:   _iot_tls_verify_cert L#51 cert. version     : 3
+serial number     : 08:DE:EA:88:21:54:C8:39:FA:3E:A7:22:3E:B3:57:B4
+issuer name       : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
+subject name      : CN=*.iot.ap-northeast-1.amazonaws.com
+issued  on        : 2020-03-02 00:00:00
+expires on        : 2021-02-08 12:00:00
+signed using      : RSA with SHA-256
+RSA key size      : 2048 bits
+basic constraints : CA=false
+subject alt name  : iot.ap-northeast-1.amazonaws.com, *.iot.ap-northeast-1.amazonaws.com
+key usage         : Digital Signature, Key Encipherment
+ext key usage     : TLS Web Server Authentication, TLS Web Client Authentication
+
+DEBUG:   _iot_tls_verify_cert L#54   This certificate has no flags
+
+DEBUG:   iot_tls_connect L#246  ok
+    [ Protocol is TLSv1.2 ]
+    [ Ciphersuite is TLS-ECDHE-RSA-WITH-AES-128-GCM-SHA256 ]
+
+DEBUG:   iot_tls_connect L#248     [ Record expansion is 29 ]
+
+DEBUG:   iot_tls_connect L#253   . Verifying peer X.509 certificate...
+DEBUG:   iot_tls_connect L#262  ok
+
+DEBUG:   iot_tls_connect L#272   . Peer certificate information    ...
+
+DEBUG:   iot_tls_connect L#274       cert. version     : 3
+      serial number     : 08:DE:EA:88:21:54:C8:39:FA:3E:A7:22:3E:B3:57:B4
+      issuer name       : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
+      subject name      : CN=*.iot.ap-northeast-1.amazonaws.com
+      issued  on        : 2020-03-02 00:00:00
+      expires on        : 2021-02-08 12:00:00
+      signed using      : RSA with SHA-256
+      RSA key size      : 2048 bits
+      basic constraints : CA=false
+      subject alt name  : iot.ap-northeast-1.amazonaws.com, *.iot.ap-northeast-1.amazonaws.com
+      key usage         : Digital Signature, Key Encipherment
+      ext key usage     : TLS Web Server Authentication, TLS Web Client Authentication
+
+
+Subscribing...
+-->sleep
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 0 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 1 
+-->sleep
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 2 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 3 
+-->sleep
+Subscribe callback
+sdkTest/sub	{
+  "default": "Hello from AWS IoT 5555555555"
+}
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 4 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 5 
+-->sleep
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 6 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 7 
+-->sleep
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 8 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 9 
+-->sleep
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 10 
+Subscribe callback
+sdkTest/sub	{
+  "default": "Hello from AWS IoT 44444444"
+}
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 11 
+-->sleep
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 12 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 13 
+-->sleep
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 14 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 15 
+-->sleep
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 16 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 17 
+-->sleep
+Subscribe callback
+sdkTest/sub	{
+  "default": "Hello from AWS IoT 222222222"
+}
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 18 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 19 
+-->sleep
+Subscribe callback
+sdkTest/sub	{
+  "default": "Hello from AWS IoT 222222222"
+}
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 20 
+Subscribe callback
+sdkTest/sub	{
+  "default": "Hello from AWS IoT 222222222"
+}
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 21 
+-->sleep
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 22 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 23 
+-->sleep
+Subscribe callback
+sdkTest/sub	hello from SDK QOS0 : 24 
+Subscribe callback
+sdkTest/sub	hello from SDK QOS1 : 25 
+-->sleep
+^C
+]0;ubuntu@ubuntu: ~/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sampleubuntu@ubuntu:~/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sample$ ^C
+]0;ubuntu@ubuntu: ~/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sampleubuntu@ubuntu:~/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sample$ ^C
+]0;ubuntu@ubuntu: ~/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sampleubuntu@ubuntu:~/aws-iot-device-sdk-embedded-c/samples/linux/subscribe_publish_sample$ exit
+exit
+
+Script done on 2020-03-25 00:58:01+0000

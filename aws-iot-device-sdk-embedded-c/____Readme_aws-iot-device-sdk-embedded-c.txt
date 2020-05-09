@@ -1,0 +1,1 @@
+This is the official AWS IoT device SDK code.
